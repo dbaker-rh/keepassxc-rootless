@@ -17,7 +17,6 @@ podman run --rm \
      --volume="$XAUTHORITY:$XAUTHORITY" \
      --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
      --volume="$HOME/.private:/root/data" \
-     --device=/dev/dri \
      --privileged \
      --name keepassxc \
            keepassxc
