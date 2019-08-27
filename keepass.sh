@@ -14,9 +14,9 @@ NETWORK=none
 podman run --rm \
      --net=$NETWORK \
      -e DISPLAY -e XAUTHORITY \
-     --volume="$XAUTHORITY:$XAUTHORITY" \
+     --volume="$XAUTHORITY:$XAUTHORITY:ro" \
      --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-     --volume="$HOME/.private:/root/data" \
+     --volume="$HOME/.private:/root/data:rw" \
      --privileged \
      --name keepassxc \
            keepassxc
